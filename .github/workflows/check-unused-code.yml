@@ -30,7 +30,7 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: Upload Lint Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lint-report
@@ -65,7 +65,7 @@ jobs:
         run: ./gradlew detekt
 
       - name: Upload Detekt Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
             name: detekt-report
